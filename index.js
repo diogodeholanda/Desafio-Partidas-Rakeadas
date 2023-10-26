@@ -1,13 +1,12 @@
 let contador = 0
 
-let resultado = rankearSaldo(90,10)
+let resultado = rankearSaldo(100,10)
 let nivelFinal = rankearNivel(resultado)
 
 function rankearSaldo(vitorias,derrotas)
 {
    let saldo = vitorias-derrotas
    return saldo
-   
 }
 
 function rankearNivel(rankearSaldo)
