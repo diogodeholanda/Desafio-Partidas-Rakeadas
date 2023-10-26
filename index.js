@@ -1,16 +1,20 @@
-let vitorias = 10
-
-let derrotas = 5
-
-let saldo = 0
-
-let nivel = ""
-
 let contador = 0
 
-function rankear(vitorias,derrotas)
+let resultado = rankearSaldo(90,10)
+let nivelFinal = rankearNivel(resultado)
+
+function rankearSaldo(vitorias,derrotas)
 {
-   saldo = vitorias-derrotas
+   let saldo = vitorias-derrotas
+   return saldo
+   
+}
+
+function rankearNivel(rankearSaldo)
+{
+   let saldo = rankearSaldo
+   let nivel = ""
+
    if (saldo <10)
    {
        nivel = "Ferro"
@@ -39,9 +43,11 @@ function rankear(vitorias,derrotas)
    {
       nivel = "Imortal"
    }
+   
+   return nivel
 }
    
 do{
-   console.log("O Herói tem saldo de " + saldo +" está no nível de " + nivel)
+   console.log("O Herói tem saldo de " + resultado +" está no nível de " +nivelFinal)
    contador++
 } while (contador <1)
